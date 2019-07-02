@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout3"
+    android:orientation="vertical"
+    android:id="@+id/screen">
+
+    <TextView
+        android:id="@+id/txt_TenBH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="15dp"
+        android:text=" Tên Bài Hát"
+        android:textColor="#fff"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/songImage"
+        android:layout_width="312dp"
+        android:layout_height="354dp"
+        app:srcCompat="@drawable/cd_black"
+        />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:layout_gravity="bottom">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        >
+
+        <TextView
+            android:id="@+id/txt_TimeSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="00:00"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txt_TimeTotal"
+            android:layout_width="64dp"
+            android:layout_height="31dp"
+            android:layout_toEndOf="@id/txt_TimeSong"
+            android:layout_toRightOf="@id/txt_TimeSong"
+            android:gravity="center"
+            android:text="00:00"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/img_Play"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="8dp"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="bottom"
+        android:weightSum="12"
+        android:paddingBottom="20dp">
+        <ImageButton
+            android:id="@+id/imgB_Trai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/rewind"
+            app:layout_constraintVertical_bias="1.0"
+            android:layout_weight="3"/>
+
+        <ImageButton
+            android:id="@+id/img_Play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/play"
+            android:layout_weight="3"/>
+
+        <ImageButton
+            android:id="@+id/imgB_Phai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/fastforward"
+            android:layout_weight="3"/>
+
+        <ImageButton
+            android:id="@+id/imgB_reload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/reload"
+            android:layout_weight="3"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+</LinearLayout>
