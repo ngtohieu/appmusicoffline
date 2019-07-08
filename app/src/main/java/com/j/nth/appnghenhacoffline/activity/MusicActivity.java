@@ -68,6 +68,24 @@ public class MusicActivity extends AppCompatActivity{
         UpdateTimeSong();
         txtTenBH.setText(music.getTitle());
 
+        btnReload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(mediaPlayer.isPlaying())
+                {
+                    mediaPlayer.stop();
+                }
+                clsMusic music = ListMusicActivity.clsMusicsArr.get(position);
+                mediaPlayer = MediaPlayer.create(mcontext, Uri.parse(music.getLocation()));
+
+                txtTenBH.setText(music.getTitle());
+                mediaPlayer.start();
+                btnPlay.setImageResource(R.drawable.pause);
+                SetTimeToTal();
+                UpdateTimeSong();
+            }
+        });
+
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
